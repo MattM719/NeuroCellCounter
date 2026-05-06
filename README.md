@@ -86,3 +86,7 @@ Target nuclei may be annotated in ImageJ using the following protocol.
 1. File > Save as > PNG
 
 Save the `.png` files in a different folder. Aside from the extension, ensure the corresponding `.png` and `.nd2` files have the same name.  
+
+## Pre-trained classifiers
+
+A pretrained classifier is provided in `clf_models/` to help users get started. The zip file must be uncompressed, and a path to the uncompressed folder may be provided as the classifier for `cell_counter.py` or `apply_prev_rdf_model.py` to classify cell nuclei as pyknotic vs. non-pyknotic. Different levels of magnification and other variations in histology images may reduce the classifier's performance in images from other sources. Please internally validate the pretrained classifier or use `train_rdf_model.py` to train a new classifier.
